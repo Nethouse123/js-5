@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS ссылка в новой вкладке</title>
+</head>
+<body>
+  <a href=
+  https://www.youtube.com/channel/UC0b91skJCES9Y1UyDFuOUhw "https://www.youtube.com/channel/UC0b91skJCES9Y1UyDFuOUhw"
+  onClick="NewWindow(this.href,'name','600','600','yes');return false">Открыть ссылку в новой вкладке.</a>
+  <script language="javascript">
+  var win = null;
+  function NewWindow(mypage,myname,w,h,scroll){
+  LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+  TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+  settings =
+  'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+  win = window.open(mypage,myname,settings)
+  }</script>
+  
+  
+</body>
+</html>
